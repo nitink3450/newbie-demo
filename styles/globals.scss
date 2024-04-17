@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "neurial-grotesk";
+  font-size: 16px;
+  min-height: 100%;
+  font-display: swap;
+  height: auto;
+  font-style: normal;
+  font-feature-settings: normal !important;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+}
+
+@layer utilities {
+  //  Global claases goes here
+
+  .b1 {
+    border: 1px solid red;
+  }
+
+  .cardsV3 {
+    @media screen and (max-width: 767px) {
+      margin: 44px auto 0;
+
+      .cardV3:last-child {
+        border-bottom: 0;
+      }
+
+      .cardV3:last-child:after {
+        height: 0;
+      }
+    }
+
+    .cardV3::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      background: #31a93e;
+      transition: width 1.5s;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .cardV3:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+@layer components {}
+
+@layer base {}

@@ -1,0 +1,13 @@
+/* fonts */
+
+@font-face {
+    font-family: "neurial-grotesk";
+    src: url("/fonts/NeurialGrotesk-Regular.otf") format('truetype');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "neurial-grotesk-medium";
+    src: url("/fonts/NeurialGrotesk-Medium.otf") format('truetype');
+    font-display: fallback;
+}
